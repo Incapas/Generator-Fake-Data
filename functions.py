@@ -1,0 +1,82 @@
+from faker import Faker
+
+# Initialise un objet Faker avec la locale française (fr_FR).
+# Cela configure Faker pour générer des données factices qui ressemblent à des données françaises.
+fake = Faker(locale="fr_FR")
+
+# Dictionnaire 'references' qui mappe des noms de champs descriptifs à des fonctions Faker.
+# Chaque clé est une chaîne de caractères représentant le type de donnée à générer.
+# Chaque valeur est la méthode correspondante de l'objet `fake` qui générera cette donnée.
+# Cela permet une abstraction, rendant le code plus lisible et facile à utiliser pour générer différents types de données.
+functions = {
+    "Nom complet": fake.name,
+    "Prénom": fake.first_name,
+    "Nom": fake.last_name,
+    "Préfixe": fake.prefix,
+    "Numéro de sécurité sociale": fake.ssn,
+    "Date de naissance": fake.date_of_birth,
+    "Emploi": fake.job,
+    "Employeur": fake.company,
+    "E-mail": fake.email,
+    "Numéro de téléphone": fake.phone_number,
+    "Nom d'utilisateur": fake.user_name,
+    "Mot de passe": fake.password,
+    "User Agent de navigateur": fake.user_agent,
+    "User Agent Chrome": fake.user_agent,
+    "User Agent Firefox": fake.chrome,
+    "User Agent Safari": fake.firefox,
+    "User Agent Opera": fake.opera,
+    "User Agent Internet Explorer": fake.internet_explorer,
+    "Adresse complète": fake.address,
+    "Numéro et nom de rue": fake.street_address,
+    "Nom de rue": fake.street_name,
+    "Numéro de bâtiment": fake.building_number,
+    "Code postal": fake.postcode,
+    "Ville": fake.city,
+    "Pays": fake.country,
+    "Code pays": fake.country_code,
+    "Latitude": fake.latitude,
+    "Longitude": fake.longitude,
+    "Date et heure": fake.date_time,
+    "Date de ce siècle": fake.date_this_century,
+    "Date de ce cette décennie": fake.date_this_decade,
+    "Date de ce cette année": fake.date_this_year,
+    "Date de ce mois": fake.date_this_month,
+    "Mois": fake.month,
+    "Jour de la semaine": fake.day_of_week,
+    "Jour du mois": fake.day_of_month,
+    "Année": fake.year,
+    "Heure": fake.time,
+    "Date/Heure au format ISO 8601": fake.iso8601,
+    "URL": fake.url,
+    "Code de statut HTTP": fake.http_status_code,
+    "Adresse IPv4": fake.ipv4,
+    "Adresse IPv6": fake.ipv6,
+    "Adresse MAC": fake.mac_address,
+    "Nom de domaine": fake.domain_name,
+    "Nom de fichier": fake.file_name,
+    "Extension de fichier": fake.file_extension,
+    "UUID v4": fake.uuid4,
+    "Hash MD5": fake.md5,
+    "Hash SHA256": fake.sha256,
+    "Chemin de périphérique Unix": fake.unix_device,
+    "Parition Unix": fake.unix_partition,
+    "Numéro EAN-13": fake.ean13,
+    "Numéro EAN-8": fake.ean8,
+    "Numéro ISBN-10": fake.isbn10,
+    "Numéro ISBN-13": fake.isbn13,
+    "Numéro IBAN": fake.iban,
+    "Code SWIFT à 8 caractères": fake.swift8,
+    "Code SWIFT à 11 caractères": fake.swift11,
+    "Numéro de carte de crédit": fake.credit_card_number,
+    "Date d'expiration de la carte de crédit": fake.credit_card_expire,
+    "Etiquette de prix": fake.pricetag,
+    "Code de devise": fake.currency,
+    "Nom de la devise": fake.currency_name,
+    "Nom de couleur": fake.color_name,
+    "Code héxadécimale de couleur": fake.hex_color,
+    "Valeurs RGB de couleur": fake.rgb_color,
+    "Couleur RGB au format CSS": fake.rgb_css_color
+}
+
+
