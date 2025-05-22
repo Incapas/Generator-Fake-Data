@@ -48,50 +48,56 @@ st.text(body="Données factices à générer dans un dataframe exportable en CSV
 # Les sélections de l'utilisateur sont stockées dans les variables d'état de session Streamlit, identifiées par la clé unique de chaque widget `st.pills` (ex: "personal_information", "adresses_locations").
 with st.expander("Informations personnelles"):
     container_personal_information = st.pills(
-        label="", 
+        label="Informations personnelles", 
         options=fields.personal_information, 
         selection_mode="multi",
-        key="personal_information"
+        key="personal_information",
+        label_visibility="hidden"
         )
 
 with st.expander("Adresses et localisations"):
    container_addresses_locations = st.pills(
-        label="", 
+        label="Adresses et localisations", 
         options=fields.adresses_locations, 
         selection_mode="multi",
         key="adresses_locations",
+        label_visibility="hidden"
         )
 
 with st.expander("Dates et Heures"):
     container_dates_times = st.pills(
-        label="", 
+        label="Dates et Heures", 
         options=fields.dates_times, 
         selection_mode="multi",
-        key="dates_times"
+        key="dates_times",
+        label_visibility="hidden"
         )
     
 with st.expander("Identifiants et codes"):
     container_identifiers_codes = st.pills(
-        label="", 
+        label="Identifiants et codes", 
         options=fields.identifiers_codes, 
         selection_mode="multi",
-        key="identifiers_codes"
+        key="identifiers_codes",
+        label_visibility="hidden"
         )
     
 with st.expander("Données financières"):
     container_financial_data = st.pills(
-        label="", 
+        label="Données financières", 
         options=fields.financial_data, 
         selection_mode="multi",
-        key="financial_data"
+        key="financial_data",
+        label_visibility="hidden"
         )
     
 with st.expander("Couleurs"):
     container_colors = st.pills(
-        label="", 
+        label="Couleurs", 
         options=fields.colors, 
         selection_mode="multi",
-        key="colors"
+        key="colors",
+        label_visibility="hidden"
         )
     
 # Ce curseur `st.slider` permet à l'utilisateur de définir le nombre de lignes qu'il souhaite que le jeu de données généré contienne.
@@ -132,5 +138,5 @@ if d:
     st.dataframe(data=d, use_container_width=True, hide_index=False)
 # Si aucun champ n'a été sélectionné (et donc aucune donnée générée), affiche un message d'information.
 else:
-    st.info("Aucune donnée n'a été sélectionnée...")
+    st.info(body="Aucune donnée n'a été sélectionnée...")
 
