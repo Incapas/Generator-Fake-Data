@@ -18,9 +18,6 @@ def reset() -> None:
    st.session_state["slider"] = 10
    return None
 
-# Configure la mise en page de l'application Streamlit pour utiliser toute la largeur disponible de l'écran.
-st.set_page_config(layout="wide")
-
 # Cette section initialise les variables nécessaires dans `st.session_state` si elles n'existent pas déjà.
 # Cela permet de maintenir l'état des sélections de l'utilisateur à travers les réexécutions de l'application Streamlit. 
 # Chaque clé représente une catégorie de données.
@@ -40,10 +37,10 @@ if "slider" not in st.session_state:
     st.session_state["slider"] = 10
 
 # Affiche le titre principal de l'application.
-st.title(body="Générateur de données fictives")
+st.title(body="Générateur de données factices")
 
 # Fournit une brève description de l'application.
-st.text(body="Données fictives à exporter en CSV depuis un Dataframe.")
+st.text(body="Données factices à générer dans un dataframe exportable en CSV.")
 
 # Ces sections utilisent `st.expander` pour organiser les options de sélection par catégorie.
 # À l'intérieur de chaque expander, des widgets `st.pills` sont utilisés pour permettre à l'utilisateur de choisir plusieurs options.
