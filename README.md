@@ -6,3 +6,7 @@ Application Streamlit développée en Python pour générer des données factice
 ## Tech Stack
 
 Python 3.12.4
+
+## Déploiement
+
+Lien de l'application : https://incapas-generator-fake-data-main-xd39px.streamlit.app/
